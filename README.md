@@ -53,7 +53,10 @@ A few real data-quality issues came up during this project — full details in [
 - **Modeling decision**: treated customer location as a fixed home address rather than per-order shipping destination, for simplicity
 
 ## Key Insights
-I will update this later
+
+**1. Revenue ≠ Profitability.** Several top-10 products by revenue are barely profitable or losing money — e.g. Cisco TelePresence System (-8.0% margin) and GBC DocuBind P400 (-10.5% margin) — despite being among the highest earners by sales volume.
+
+**2. Discounting has a clear profitability breaking point.** Profit margin decays sharply as discount level rises: from +29.5% margin at 0% discount, down to -15.3% once discounts exceed 20%, and as low as -122.6% at 60%+ discount. The data suggests discounts beyond ~20-30% are not cost-justified and actively erode profit rather than just reducing it — a real, actionable insight for pricing strategy.
 
 ## Setup / How to Run
 
