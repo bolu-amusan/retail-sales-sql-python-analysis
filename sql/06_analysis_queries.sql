@@ -56,3 +56,28 @@ SELECT
 FROM order_items
 GROUP BY discount_band
 ORDER BY MIN(discount);
+
+-- 4. Sales and profit performance by category and sub-category
+SELECT
+    p.category,
+    p.sub_category,
+    ROUND(SUM(oi.sales)::NUMERIC, 2) AS total_sales,
+    ROUND(SUM(oi.profit)::NUMERIC, 2) AS total_profit,
+    ROUND((SUM(oi.profit) / NULLIF(SUM(oi.sales), 0) * 100)::NUMERIC, 1) AS profit_margin_pct
+FROM order_items oi
+JOIN products p ON oi.product_id = p.product_id
+GROUP BY p.category, p.sub_category
+ORDER BY total_sales DESC;
+
+-- 5. Sales and profit performance by region
+SELECT
+    c.region,
+    COUNT(DISTINCT o.order_id) AS total_orders,
+    ROUND(SUM(oi.sales)::NUMERIC, 2) AS total_sales,
+    ROUND(SUM(oi.profit)::NUMERIC, 2) AS total_profit,
+    ROUND((SUM(oi.profit) / NULLIF(SUM(oi.sales), 0) * 100)::NUMERIC, 1) AS profit_margin_pct
+FROM order_items oi
+JOIN orders o ON oi.order_id = o.order_id
+JOIN customers c ON o.customer_id = c.customer_id
+GROUP BY c.region
+ORDER BY total_sales DESC;
