@@ -56,13 +56,17 @@ A few real data-quality issues came up during this project — full details in [
 
 **1. Revenue ≠ Profitability.** Several top-10 products by revenue are barely profitable or losing money — e.g. Cisco TelePresence System (-8.0% margin) and GBC DocuBind P400 (-10.5% margin) — despite being among the highest earners by sales volume.
 
-**2. Discounting has a clear profitability breaking point.** Profit margin decays sharply as discount level rises: from +29.5% margin at 0% discount, down to -15.3% once discounts exceed 20%, and as low as -122.6% at 60%+ discount. Discounts beyond ~20-30% are not cost-justified and actively erode profit rather than just reducing it.
+**2. Discounting has a clear profitability breaking point.** Profit margin decays sharply as discount level rises: from +29.5% margin at 0% discount, down to -15.3% once discounts exceed 20%, and as low as -122.6% at 60%+ discount.
 
-**3. Furniture is a category-wide problem, not just isolated products.** Tables (-8.6% margin, -$17.7K) and Bookcases (-3.0% margin, -$3.5K) are both loss-making sub-categories, with Tables representing the single largest dollar loss in the dataset. In contrast, Labels (44.4%), Paper (43.4%), and Copiers (37.2%, on solid $149K revenue) are standout high-margin performers worth leaning into further.
+**3. Furniture is a category-wide problem, not just isolated products.** Tables (-8.6% margin, -$17.7K) and Bookcases (-3.0% margin, -$3.5K) are loss-making sub-categories. In contrast, Labels (44.4%), Paper (43.4%), and Copiers (37.2%, on $149K revenue) are standout high-margin performers.
 
-**4. Regional performance is balanced, with one efficiency gap.** All four regions are profitable, with margins in a tight 11.4%–13.7% band. West leads in raw sales and order volume, but Central converts revenue to profit most efficiently (13.7% margin) despite lower sales volume — suggesting Central's approach (product mix, discounting discipline, or customer base) may be worth studying and replicating elsewhere.
+**4. Steady growth with strong seasonality.** Monthly revenue grew from roughly $392K in 2014 to $674K in 2017. Sales consistently spike in September, November, and December each year — November 2017 was the single strongest month in the dataset (213 orders, $89.3K in sales), consistent with back-to-school and holiday retail patterns.
 
-**Overall narrative:** the business generates strong revenue, but a specific, identifiable set of products and sub-categories — concentrated in Furniture and correlated with discounts above 20-30% — are quietly eating into profitability, while several high-margin categories are being under-leveraged.
+**5. Regional performance is balanced.** All four regions are profitable (11.4%–13.7% margin). West leads in raw sales, but Central converts revenue to profit most efficiently.
+
+**6. The highest-revenue customer was actually losing the business money — and it led to the root cause.** Among the top 10 customers by spend, `SM-20320` generated the most revenue ($25,043) but the *only* negative profit (-$1,981), while others like `TC-20980` posted strong margins (47%). Investigating both this customer and an unprofitable month (April 2017) traced back to the same pattern: individual big-ticket Technology products (3D printers, TelePresence systems, laser printers) sold at 50-70% discounts. A single Cisco TelePresence System sale at 50% off, for example, alone accounted for one customer's entire lifetime loss, despite all their other purchases being profitable.
+
+**Overall narrative:** This business is fundamentally healthy — solid revenue growth, balanced regional performance, and several genuinely high-margin categories. Its profitability problems are not broad or structural, but traceable to a specific, correctable pattern: steep discounting (50%+) on individual high-value Technology products. A targeted discount cap or approval threshold on big-ticket Technology items would likely resolve most of the loss-making transactions identified in this analysis.
 
 ## Setup / How to Run
 

@@ -81,3 +81,60 @@ JOIN orders o ON oi.order_id = o.order_id
 JOIN customers c ON o.customer_id = c.customer_id
 GROUP BY c.region
 ORDER BY total_sales DESC;
+
+-- 6. Month-over-month sales and profit trend
+SELECT
+    DATE_TRUNC('month', o.order_date)::DATE AS month,
+    COUNT(DISTINCT o.order_id) AS total_orders,
+    ROUND(SUM(oi.sales)::NUMERIC, 2) AS total_sales,
+    ROUND(SUM(oi.profit)::NUMERIC, 2) AS total_profit
+FROM order_items oi
+JOIN orders o ON oi.order_id = o.order_id
+GROUP BY DATE_TRUNC('month', o.order_date)
+ORDER BY month;
+
+-- 7. Top 10 customers by total spend
+SELECT
+    c.customer_id,
+    c.segment,
+    c.region,
+    COUNT(DISTINCT o.order_id) AS total_orders,
+    ROUND(SUM(oi.sales)::NUMERIC, 2) AS total_sales,
+    ROUND(SUM(oi.profit)::NUMERIC, 2) AS total_profit
+FROM order_items oi
+JOIN orders o ON oi.order_id = o.order_id
+JOIN customers c ON o.customer_id = c.customer_id
+GROUP BY c.customer_id, c.segment, c.region
+ORDER BY total_sales DESC
+LIMIT 10;
+
+-- 8. Investigate the April 2017 loss anomaly
+SELECT
+    o.order_id,
+    o.order_date,
+    p.product_name,
+    p.category,
+    oi.sales,
+    oi.discount,
+    oi.profit
+FROM order_items oi
+JOIN orders o ON oi.order_id = o.order_id
+JOIN products p ON oi.product_id = p.product_id
+WHERE o.order_date >= '2017-04-01' AND o.order_date < '2017-05-01'
+ORDER BY oi.profit ASC
+LIMIT 10;
+
+-- 9. Investigate SM-20320's orders and discount levels
+SELECT
+    o.order_id,
+    o.order_date,
+    p.product_name,
+    p.category,
+    oi.sales,
+    oi.discount,
+    oi.profit
+FROM order_items oi
+JOIN orders o ON oi.order_id = o.order_id
+JOIN products p ON oi.product_id = p.product_id
+WHERE o.customer_id = 'SM-20320'
+ORDER BY o.order_date;
