@@ -63,5 +63,5 @@ A few real data-quality issues came up during this project — full details in [
 1. Clone this repo
 2. Download the dataset (see `data/README.md`) and place it in `data/`
 3. Create a PostgreSQL database
-4. Run the SQL scripts in `sql/` in order (01 → 05)
+4. Run the SQL scripts in `sql/` in order (01 → 06)
 5. Open `notebooks/` for the Python analysis
