@@ -68,6 +68,28 @@ A few real data-quality issues came up during this project — full details in [
 
 **Overall narrative:** This business is fundamentally healthy — solid revenue growth, balanced regional performance, and several genuinely high-margin categories. Its profitability problems are not broad or structural, but traceable to a specific, correctable pattern: steep discounting (50%+) on individual high-value Technology products. A targeted discount cap or approval threshold on big-ticket Technology items would likely resolve most of the loss-making transactions identified in this analysis.
 
+## Visualizations
+
+### Monthly Sales & Profit Trend
+![Monthly Sales Trend](images/monthly_sales_trend.png)
+
+Revenue grew steadily from 2014 to 2017, with consistent seasonal spikes each September, November, and December — November 2017 was the strongest month in the dataset.
+
+### Profit Margin by Sub-Category
+![Category Profit Margin](images/category_profit_margin.png)
+
+Tables, Bookcases, and Supplies are the only loss-making sub-categories, with Tables representing the single largest dollar loss. Labels, Paper, and Envelopes are the strongest performers by margin.
+
+### Profit Margin by Discount Level
+![Discount vs Profit Margin](images/discount_vs_profit_margin.png)
+
+Profit margin declines sharply as discount level increases, turning negative once discounts exceed roughly 20-40% — a clear, actionable pricing threshold.
+
+### Regional Sales Volume vs. Profit Margin
+![Regional Performance](images/regional_performance.png)
+
+West leads in raw sales volume, but Central achieves the highest profit margin — showing that sales volume and profitability don't always move together.
+
 ## Setup / How to Run
 
 1. Clone this repo
