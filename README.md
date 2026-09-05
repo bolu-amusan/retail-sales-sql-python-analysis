@@ -1,3 +1,9 @@
+## Executive Summary
+
+This project analyzes 4 years of retail sales data (2014-2017, ~10,000 transactions) to uncover the drivers of business profitability. While overall revenue grew steadily and most regions and categories are healthy, the analysis identifies a specific, correctable pattern: **individual high-value Technology products discounted 50%+ are quietly eroding profit**, despite strong overall sales performance. The project covers the full analyst workflow — from raw CSV to a normalized PostgreSQL database, through SQL-based analysis, to Python visualizations that make the findings clear and actionable.
+
+**Key finding:** Discounts beyond ~20-30% are not cost-justified in this dataset — profit margin turns negative past that threshold and reaches -122% at 60%+ discount.
+
 # Retail Sales Analysis — SQL & Python
 
 End-to-end analysis of retail sales data using PostgreSQL and Python — from raw, messy CSV to a normalized relational database and business insights.
