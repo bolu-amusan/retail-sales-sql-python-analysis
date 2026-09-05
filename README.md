@@ -74,6 +74,18 @@ A few real data-quality issues came up during this project — full details in [
 
 **Overall narrative:** This business is fundamentally healthy — solid revenue growth, balanced regional performance, and several genuinely high-margin categories. Its profitability problems are not broad or structural, but traceable to a specific, correctable pattern: steep discounting (50%+) on individual high-value Technology products. A targeted discount cap or approval threshold on big-ticket Technology items would likely resolve most of the loss-making transactions identified in this analysis.
 
+## Recommendations
+
+1. **Cap discounts on high-value Technology products.** Profit margin turns negative once discounts exceed ~20-30%, and losses compound sharply beyond that. Introducing an approval threshold (e.g. manager sign-off required for discounts above 20% on items over $500) would likely prevent most of the loss-making transactions identified in this analysis.
+
+2. **Review pricing and cost structure for Tables and Bookcases.** These are the only consistently loss-making sub-categories, independent of individual outlier transactions. Worth investigating whether this stems from shipping costs, supplier pricing, or a category-wide discounting habit.
+
+3. **Investigate what Central region is doing right.** Central converts revenue to profit more efficiently than any other region despite lower sales volume — understanding their customer mix, product mix, or discounting discipline could offer a replicable playbook for West and East.
+
+4. **Double-check large individual sales before applying steep discounts.** Several of the worst individual losses (the April 2017 dip, the top customer's negative profit) trace back to single transactions with 50-70% discounts on big-ticket items — these look like cases where closing a big sale may have taken priority over checking the margin impact.
+
+5. **Lean further into high-margin categories.** Labels, Paper, Envelopes, and Copiers all show margins above 35% — worth considering for more visible placement, bundling, or promotional focus, since they're already proven profit drivers.
+
 ## Visualizations
 
 ### Monthly Sales & Profit Trend
